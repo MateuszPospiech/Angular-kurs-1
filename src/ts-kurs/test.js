@@ -1,4 +1,4 @@
-var TestType = /** @class */ (function () {
+git statusvar TestType = /** @class */ (function () {
     function TestType() {
         this.name = 'Mateusz';
         this.age = 27;
