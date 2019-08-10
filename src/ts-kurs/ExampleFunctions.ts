@@ -27,10 +27,10 @@ class ExampleFunctions {
 
 }
 
-let example = new ExampleFunctions();
-example.showMsg();
-example.hello1('Hello World, finckja hello1');
-example.hello2('Hello World,', 'to jest opcjonalna wartość');
-example.hello3('Hello World');
-example.hello4('wywołana');
-example.hello5();
+let example2 = new ExampleFunctions();
+example2.showMsg();
+example2.hello1('Hello World, finckja hello1');
+example2.hello2('Hello World,', 'to jest opcjonalna wartość');
+example2.hello3('Hello World');
+example2.hello4('wywołana');
+example2.hello5();
