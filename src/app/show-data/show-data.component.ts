@@ -12,16 +12,24 @@ export class ShowDataComponent {
   date = new Date();
 
   // dog = new Dog('Reksio', 4);
-  dog: Dog;
+  // dog: Dog;
 
-  showDog() {
-    return 'Mój pies to ' + this.dog.name + ' i ma ' + this.dog.age + ' lat.';
+  dogs = new Array<Dog>();
+
+  constructor() {
+    this.dogs.push(new Dog('Reksio', 4), new Dog('Ciapek', 3), new Dog('Azor',2));
   }
+
+  days = ['Poniedziałek', 'Wtorek', 'Środa', 'Czwartek', 'Piątek', 'Sobota', 'Niedziela'];
+
+  // showDog() {
+  //   return 'Mój pies to ' + this.dog.name + ' i ma ' + this.dog.age + ' lat.';
+  // }
+
 }
 
 class Dog {
   constructor(public name: string, public age: number) {
   }
-
 
 }
