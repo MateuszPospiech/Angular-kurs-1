@@ -2,8 +2,8 @@
 Witamy w kursie {{title | uppercase}} <br>
 Liczba PI to: {{pi | number: '1.1-2' }} <br>
 Dzisiaj jest: {{date | date: 'dd-MM-yy' }} <br>
-Mój pies to: {{dog.name}} <br>
-Ma {{dog.age}} lat <br>
+Mój pies to: {{dog?.name}} <br> <!-- ? checks if object dog is not undefind or null -->
+Ma {{dog?.age}} lat <br>
 
 {{showDog() | lowercase}}
 </p>

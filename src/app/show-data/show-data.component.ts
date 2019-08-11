@@ -11,7 +11,8 @@ export class ShowDataComponent {
   pi = Math.PI;
   date = new Date();
 
-  dog = new Dog('Reksio', 4);
+  // dog = new Dog('Reksio', 4);
+  dog: Dog;
 
   showDog() {
     return 'Mój pies to ' + this.dog.name + ' i ma ' + this.dog.age + ' lat.';
