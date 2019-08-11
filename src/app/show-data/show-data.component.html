@@ -1,9 +1,9 @@
 <p>
-Witamy w kursie {{title}} <br>
-Liczba PI {{pi}} <br>
-Dzisiaj jest: {{date}} <br>
+Witamy w kursie {{title | uppercase}} <br>
+Liczba PI to: {{pi | number: '1.1-2' }} <br>
+Dzisiaj jest: {{date | date: 'dd-MM-yy' }} <br>
 Mój pies to: {{dog.name}} <br>
 Ma {{dog.age}} lat <br>
 
-{{showDog()}}
+{{showDog() | lowercase}}
 </p>
