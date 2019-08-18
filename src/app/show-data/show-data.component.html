@@ -7,7 +7,8 @@ Dzisiaj jest: {{date | date: 'dd-MM-yy' }} <br>
 
 <!-- {{showDog() | lowercase}} -->
 </p>
- 
+<hr>
+
 <strong>*ngFor</strong>
 <p>Dni tygodnia</p>
 <ul>
@@ -17,6 +18,21 @@ Dzisiaj jest: {{date | date: 'dd-MM-yy' }} <br>
         </li>
     </ng-container>
 </ul>
+<hr>
+
+<p>Dni tygodnia Switch</p>
+<ng-container *ngFor = "let day of days">
+    <div [ngSwitch]="day">
+        <div *ngSwitchCase="'Poniedziałek'">Montag</div>
+        <div *ngSwitchCase="'Wtorek'">Dienstag</div>
+        <div *ngSwitchCase="'Środa'">Mittwoch</div>
+        <div *ngSwitchCase="'Czwartek'">Donnerstag</div>
+        <div *ngSwitchCase="'Piątek'">Freitag</div>
+        <div *ngSwitchCase="'Sobota'">Samstag</div>
+        <div *ngSwitchDefault>Sonntag</div>
+    </div>
+</ng-container>
+<hr>
 
 <div *ngFor="let dog of dogs" >
     <ng-container *ngIf="dog.age < 3; then areDogs; else noDogs"></ng-container>
