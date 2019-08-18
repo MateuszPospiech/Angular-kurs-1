@@ -19,8 +19,15 @@ Dzisiaj jest: {{date | date: 'dd-MM-yy' }} <br>
 </ul>
 
 <div *ngFor="let dog of dogs" >
-    <ng-container *ngIf="dog.age < 3">
-    Mój pies ma na imię {{ dog.name }}, ma {{ dog.age }} lat(a).
-    </ng-container>
+    <ng-container *ngIf="dog.age < 3; then areDogs; else noDogs"></ng-container>
+
+    <ng-template #areDogs>
+        <p>Mój pies ma na imię {{ dog.name }}, ma {{ dog.age }} lat(a).</p>
+    </ng-template>
+
+    <ng-template #noDogs>
+        <p>Pies o imieniu {{ dog.name }}, ma więcej niż 3 lata.</p>
+    </ng-template>
 </div>
+
 
