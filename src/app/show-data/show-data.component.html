@@ -11,10 +11,16 @@ Dzisiaj jest: {{date | date: 'dd-MM-yy' }} <br>
 <strong>*ngFor</strong>
 <p>Dni tygodnia</p>
 <ul>
-    <li *ngFor = "let day of days; let i = index">
-        {{i + 1}} {{day}}
-    </li>
+    <ng-container *ngFor = "let day of days; let i = index; let e = odd">
+        <li *ngIf="e">
+            {{i + 1}} {{day}}
+        </li>
+    </ng-container>
 </ul>
 
-<div *ngFor="let dog of dogs" >Mój pies ma na imię {{ dog.name }}, ma {{ dog.age }} lat(a)</div>
+<div *ngFor="let dog of dogs" >
+    <ng-container *ngIf="dog.age < 3">
+    Mój pies ma na imię {{ dog.name }}, ma {{ dog.age }} lat(a).
+    </ng-container>
+</div>
 
